@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: manipulation;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Fredoka', 'Outfit', cursive, sans-serif;
+  }
+}
+
+/* Custom bounce and playful animations */
+@keyframes soft-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes gentle-wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes float-cloud {
+  0%, 100% { transform: translateX(0px) translateY(0px); }
+  50% { transform: translateX(18px) translateY(-6px); }
+}
+
+@keyframes gentle-twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 0.9; transform: scale(1.15); }
+}
+
+.animate-soft-bounce {
+  animation: soft-bounce 2s ease-in-out infinite;
+}
+
+.animate-gentle-wobble {
+  animation: gentle-wobble 0.6s ease-in-out;
+}
+
+.animate-float-cloud {
+  animation: float-cloud 8s ease-in-out infinite;
+}
+
+.animate-gentle-twinkle {
+  animation: gentle-twinkle 3s ease-in-out infinite;
+}
+
+/* Prevent text drag / callouts */
+img, svg {
+  -webkit-user-drag: none;
+}
